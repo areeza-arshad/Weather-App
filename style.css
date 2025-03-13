@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+/* GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* WEATHER APP */
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: #FF8FA3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.weather-app {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 1rem;
+}
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    
+}
+#userInput {
+    width: 500px;
+    border: 0;
+    outline: 0;
+    background-color: #FF4D6D;
+    border-radius: 8.8rem;
+    padding: 1rem;
+    box-shadow: 0 8px 18px -10px #000;
+}
+input {
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 1rem;
+    font-family: 'Karla', serif;
+}
+::placeholder {
+    color: #fff;
+    font-size: 1rem;
+    font-family: 'Karla', serif;
+}
+.btn {
+    color: #fff;
+    background: #FF4D6D;
+    border: 0;
+    outline: none;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 18px -10px #000;
+    cursor: pointer;
+}
+.btn:hover {
+    color: gainsboro;
+    background-color: #FF8FA3;
+}
+.btn i {
+    font-size: 1rem;
+}
+#geoButton {
+    color: #fff;
+    background: #FF4D6D;
+    border: 0;
+    outline: none;
+    padding: 1rem;
+    border-radius: 2rem;
+    box-shadow: 0 8px 18px -10px #000;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: 'Karla', serif;
+}
+.error {
+    color: #FF4D6D;
+    display: none;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: "Montserrat", serif;
+    margin-top: 1rem;
+    text-transform: capitalize;
+}
+.city-data {
+    display: none;
+}
+.city-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    grid-row-gap: 0.625rem;
+    grid-column-gap: 0.625rem;
+    padding: 2rem 0;
+}
+.city-system {
+    display: flex;
+    justify-content: space-between;
+}
+.name {
+    color: #FF4D6D;
+    font-size: 2rem;
+    font-family: "Montserrat", serif;
+}
+.weather-icon {
+    height: 100px;
+    width: 100px;
+}
+.temprature {
+    color: #FF4D6D;
+    font-size: 2.5rem;
+    font-family: "Montserrat", serif;
+}
+
+.weather-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+}
+.card1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.card1 svg {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+.sunrise {
+    color: #FF8FA3;
+    font-size: 0.7rem;
+    font-family: 'Karla', serif;
+    text-transform: uppercase;
+    text-align: center;
+}
+.sunrise-time {
+    color: #FF4D6D;
+    font-size: 1.3rem;
+    font-family: "Montserrat", serif;
+    text-align: center;
+}
+.card2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* border-right: 1px solid #FF4D6D;
+    border-left: 1px solid #FF4D6D; */
+}
+.card2 svg {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+.wind-name {
+    color: #FF8FA3;
+    font-size: 0.7rem;
+    font-family: 'Karla', serif;
+    text-transform: uppercase;
+    text-align: center;
+}
+.wind {
+    color: #FF4D6D;
+    font-size: 1.3rem;
+    font-family: "Montserrat", serif;
+    text-align: center;
+}
+.card3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.card3 svg {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+.humidity-name {
+    color: #FF8FA3;
+    font-size: 0.7rem;
+    font-family: 'Karla', serif;
+    text-transform: uppercase;
+    text-align: center;
+}
+.humidity {
+    color: #FF4D6D;
+    font-size: 1.3rem;
+    font-family: "Montserrat", serif;
+    text-align: center;
+}
+.forecast {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+    margin-top: 20px;
+}
+.forecast-day {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border-radius: 1rem;
+    text-align: center;
+    color: #fff;
+    background-color: #FF4D6D;
+    font-family: "Montserrat", serif;
+    box-shadow: 0 8px 18px -10px #000;
+}
+.forecast-day img {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: auto;
+}
+.flex {
+    display: flex;
+    gap: 1.25rem;
+    
+}
